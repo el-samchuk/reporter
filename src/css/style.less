@@ -1,0 +1,689 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+}
+body {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+/*-------------Colors----------------------*/
+@footerColor: #3e3e3e;
+@whtColor: #ffffff;
+@redColor: #ff4200;
+@greenColor: #17e31c;
+@yellowColor: #ffce00;
+@mintColor: #00f1bb;
+@violetColor: #9a50ff;
+@darkRedColor: #e33b3b;
+@blueColor: #3bbce3;
+@navyColor: #00d2ff;
+
+
+/*------------Fonts-----------------------*/
+@h2Font: 7.2rem;
+@h4Font: 3.2rem;
+@h5Font: 2.4rem;
+@maintext: 2.4rem;
+@textLink: 3.3rem;
+
+.font16() {
+	font-size: 1.6rem;
+	color: @whtColor;
+}
+.font27() {
+	font-size: 2.7rem;
+	color: @whtColor;
+}
+.font21() {
+	font-size: 2.1rem;
+	color: @whtColor;
+}
+/*H2*/
+.titleH2() {
+	font-size: @h2Font;
+	color: @whtColor;
+	border: 3px dashed #fff;
+	border-radius: 2rem;
+	margin-top: 5rem;
+}
+/*прямоугольник с наклоном*/
+.skew-form() {
+	height: 4.8rem;
+	-ms-transform: skewX(-15deg);
+	-webkit-transform: skewX(-15deg);
+	transform: skewX(-15deg);
+}
+/*выравнивание текста в прямоугольнике с наклоном*/
+.link() {
+	font-size: @textLink;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 3.6rem;
+	border-bottom: 2px dotted #fff;
+	position: absolute;
+	margin-left: 1.5rem;
+	-ms-transform: skewX(15deg);
+	-webkit-transform: skewX(15deg);
+	transform: skewX(15deg);
+}
+/*подчеркивание голубым цветом*/
+.borderBlue() { 
+	border-bottom: 1px dotted #3bbce3;
+}
+/*подчеркивание белым цветом*/
+.borderWht() {
+	border-bottom: 2px dotted #fff;
+}
+.bg() {
+	background-repeat: no-repeat;
+	background-position: top; 
+	background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+}
+/*----------------HEADER STICKY--------------------*/
+.header-content {
+	height: 5rem;
+	width: 100%;
+  	position: fixed;
+  	display: block;
+	background-color: #000;
+	opacity: 0.8;
+	z-index: 1;
+	.navbar {
+		margin-left: 16%;
+	}
+	
+	ul {
+		display: inline-block;
+		width: 100rem;
+		list-style: none;
+		text-align: center;
+		margin: 0 ;
+		padding: 0;
+
+		li {
+			display: inline;
+			float: left;
+			margin: 0 auto;
+			font-size: 1.6rem;
+			line-height: 2.4rem; 
+			a {
+				display: inline-block;
+				padding: 1rem;
+			}
+			img {
+				position: relative;
+    			vertical-align: middle;
+			}
+		}
+	}
+	.header-btn {
+		height: 4rem;
+		display: block;
+		vertical-align: middle;
+		.font16();
+		background-color: @blueColor; 
+		border: 2px solid @whtColor;
+		margin-top: 3px;
+	}
+
+	.header-text {
+		display: inline-block;
+		font-weight: bold;
+		padding-left: 1rem;
+		.borderBlue(); 
+	}
+}
+/*----------------END of STICKY HEADER---------*/
+
+/*----------------HEADER-MAIN------------------*/
+.header-main {
+	.bg();
+	background-image: url('img/banner-header.png');
+	min-height: 86.5rem;
+	.logo {
+		margin-top: 10rem;
+	}
+	.about{
+		height: 4rem;
+		line-height: 4rem;
+		margin-top: 2rem;
+		ul li {
+			display: inline-block;
+			list-style: none;
+			a {
+				.borderWht();
+				font-size: 2.2rem;                      
+				color: @whtColor;
+				margin: 0 auto;
+				margin-right: 5rem;
+				text-decoration: none;
+			}
+		}	
+	} 
+		
+	.head-small {
+		width: 100%;
+		height: 4.5rem;
+		line-height: 4.5rem;
+		background-color: #0b2736;
+		opacity: 0.8;
+	
+		a {
+				font-size: 2.2rem;        
+				color: @blueColor;
+				.borderWht();
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				text-decoration: none;
+			}
+			img {
+				position: relative;
+				vertical-align: middle;
+				margin-right: 1rem;
+			
+			}
+	}
+	.entrance {
+		height: 2.8rem;
+		background-color: #000;
+		width: 4.8rem;
+		-ms-transform: skewX(-15deg);    
+		-webkit-transform: skewX(-15deg);
+		transform: skewX(-15deg);
+		margin-top: 2.5rem;
+
+			a {
+				font-size: 1.3rem;
+				color: #fff;
+				font-weight: bold;
+				text-decoration: none;
+				line-height: 1.5;
+				border-bottom: 1px dotted #fff;
+				position: absolute;
+				-ms-transform: skewX(15deg);
+				-webkit-transform: skewX(15deg);
+				transform: skewX(15deg);
+			}
+	}
+	.start {
+		margin-top: 2.5rem;
+		a {
+			font-size: 1.3rem;
+			color: @whtColor;
+			border-bottom: 1px solid #fff;
+			text-decoration: none;
+		}
+	}
+	.title-logo {
+		font-size: 2.4rem;
+		color: @whtColor;
+		margin-top: 5rem;
+	}
+	.hero {
+		.bg();
+		background-image: url('img/banner-tri.png');
+		min-height: 23.3rem;
+		border-bottom: 3px dashed @whtColor;
+	}
+	
+	nav {
+		padding-top: 9rem;
+		img {
+			position: relative;
+			vertical-align: middle;
+			margin-right: 1rem;
+		}
+		.phone-img {
+			margin-right: 2.5rem;
+		}
+	}
+
+	.nav-text {
+		font-size: 2.4rem;
+		line-height: 2.4rem;
+		display: inline-block;
+		font-weight: bold;
+		margin-left: 1rem;
+		.borderBlue();
+	}
+}
+	.info-nav {
+		color: @blueColor;
+	}
+	.what-nav {
+		color: @mintColor;
+	}
+	.service-nav {
+		color: @redColor;
+	}
+	.infrasrt-nav {
+		color: @yellowColor;
+	}
+	.advant-nav {
+		color: @greenColor;
+	}
+	.rules-nav {
+		color: @violetColor;
+	}
+	.members-nav {
+		color: @darkRedColor;
+	}
+	.contact-nav {
+		color: @navyColor;
+	}
+
+	.header-footer {
+		font-size: 1.2rem;
+		padding-top: 1.8rem;
+		color: #fff;
+		a {
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			text-decoration: none;
+		}
+	}
+/*----------------END of HEADER-MAIN-------*/
+
+/*----------------INFO---------------------*/
+.info {
+	.bg();
+	background-image: url('img/banner-blue.png');
+	min-height: 159.9rem;
+
+	h2 {
+		.titleH2();
+		span {
+			img {
+				margin-bottom: 7px;
+			}
+		}
+	}
+	.skew-form {
+		.skew-form(); 
+		width: 26rem;
+		margin-top: 6.3rem;
+		background-color: #13beb3;
+			a {
+				.link();
+			}
+	}
+	.title {
+		margin-top: 3.8rem;
+		margin-bottom: 2.6rem;
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+			.font27();
+			display: inline;
+			background-color: #007296;
+			padding: 5px 0;
+
+		}
+	}
+	.content {
+		width: 63.6rem;
+		.font21();
+		padding-top: 5.5rem;
+		padding-bottom: 5.8rem;
+		margin: 0 auto;
+	}
+	.employ {
+		width: 75rem;
+		height: 37.6rem;
+		border: 2px dotted @whtColor;
+		margin: 0 auto;
+		padding-left: 6rem;
+		padding-top: 4.8rem;
+		padding-right: 3.8rem;
+
+		& p:first-child {
+			.font27();
+			font-weight: bold;
+			margin-bottom: 3.8rem;
+			} 
+		p {
+			font-size: 2rem;
+			color: @whtColor;
+
+		}
+		.btn-info {
+			.font21();
+			background-color: #f97d00;
+			border: 4px solid @whtColor;
+			border-radius: 3rem;
+			margin-top: 2rem;
+
+			img {
+				margin-right: 1.4rem;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+/*---------------END of INFO----------------*/
+
+/*---------------SERVICES------------------*/
+.services {
+	.bg();
+	background-image: url('img/banner-violet.png');
+	min-height: 111.6rem;
+	
+	.title-box {
+		width: 29.6rem;
+		height: 8rem;
+		margin: 0 auto;
+		margin-bottom: 6rem;
+			h2 {
+			.titleH2();
+
+			span {
+				img {
+					margin-bottom: 7px;
+					}
+				}
+			}
+		}
+	p {
+		.font27();
+	}
+	.serv-content {
+		width: 62rem;
+		.font21();
+    	text-indent: -7.5rem;
+		margin: 0 auto;
+	
+		img {
+			margin-right: 2rem;
+			display: inline-block;
+		}
+	}
+	.service-top {
+		width: 100rem;
+	}
+	.service-down {
+		width: 60rem;
+	}
+	.service-top, .service-down {
+		margin: 0 auto;
+		ul li {
+			display: inline-block;
+			list-style-type: none;
+			text-align: center;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			padding-right: 7px;
+		}
+	}
+}
+/*---------------END of SERVICES-----------*/
+
+/*--------------ADVANTAGE------------------*/
+.advantage {
+	.bg();
+	background-image: url('img/banner-orange.png');
+	min-height: 83.9rem;
+
+	.title-box {
+		width: 32.7rem;
+		height: 8rem;
+		margin: 0 auto;
+		margin-bottom: 6rem;
+			h2 {
+			.titleH2();
+
+			span {
+				img {
+					margin-bottom: 7px;
+					}
+				}
+			}
+		}
+
+	.thumbnail {
+		height: 37.3rem;
+		background-color: transparent;
+		border: 3px dashed #fff;
+		border-radius: 3rem;
+		img {
+			margin: 20px auto 10px;
+		}
+		p {
+			width: 20rem;
+			.font21();
+			font-weight: bold;
+			}
+		}
+	.count {
+		position: absolute;
+		top: -5rem;
+		right: 11rem;
+	} 
+	
+}
+/*--------------END of ADVANTAGE----------*/
+
+/*-------------INFRASTRUCTURE-------------*/
+.infrastructure {
+	.bg();
+	background-image: url('img/banner-red.png');
+	max-height: 121.5rem;
+
+	h2 {
+		.titleH2;
+		span {
+			img {
+				margin-bottom: 7px;
+			}
+		}
+	}
+	.skew-form {                 
+		.skew-form(); 
+		width: 13.1rem;
+		margin-top: 6.3rem;
+		background-color: @navyColor;
+			a {
+				.link();
+			}
+	}
+	h4 {
+		font-size: @h4Font;
+		color: @whtColor;
+		background-color: #b42121;
+		display: inline-block;
+		margin-left: 2rem;
+		padding: 6px 14px 14px 5px;
+
+	}
+	ul {
+    	list-style: outside;
+	}
+	li {
+		list-style-type: none;
+		ist-style-position: inside;
+		.font16();
+    	text-indent: -1rem;
+
+		.fa-check {
+			margin-right: 7px;
+		}
+	}
+	.struct-img {
+		margin-top: 6rem;
+	}
+	.price {
+		.skew-form();
+		width: 9rem;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		background-color: @greenColor;
+			a {
+				.link();
+			}
+	}
+}
+/*-------------END of INFRASTRUCTURE-----*/
+
+/*-----------------MEMBERS---------------*/
+.members {
+	.bg();
+	background-image: url('img/banner-green.png');
+	min-height: 100.1rem;
+
+	h2 {
+		.titleH2;
+		margin-bottom: 3rem;
+		span {
+			img {
+				margin-right: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+	p {
+		font-size: @maintext; /*!!!!!!!!!!!!!!*/
+		color:  @whtColor;
+	}
+	ul {
+		width: 78rem;
+		margin-left: 20%;
+		display: inline-block;
+		list-style: none;
+		li {
+			display: inline-block;
+			padding: 0 8px 5px 0;
+		}
+		.thumbnail {
+		width: 17rem;
+		height: 20.5rem;
+		border-radius: 0;
+		border: 1px solid #fff; 
+		h6 {
+			font-size: 1.7rem;
+			color: #000;
+			font-weight: bold;
+			margin: 0; 
+			& + p {
+				font-size: 1.1rem;
+				color: #999999;
+				}
+			}
+		}	
+	}
+	.free {
+		width: 17rem;
+		height: 20.5rem;
+		border: 2px dotted #fff;
+		border-radius: 2.5rem;
+		padding-top: 2rem;
+			a {
+				font-size: 3.2rem;
+				color: #fff;
+				text-align: center;
+				line-height: 17rem;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+		}
+}
+/*-----------------END of MEMBERS---------*/
+
+/*-----------------MAP--------------------*/
+.contact-map {
+	height: 80rem;
+}
+#map {
+	width: 100%;
+	height: 80rem;
+}
+#info-box {
+	position: relative;
+	top: 10rem;
+	margin: 0 auto;
+	width: 42.9rem;
+	height: 32rem;
+	background-color: @whtColor;
+	text-align: center;
+	font-size: 1.6rem;
+	a {
+		font-weight: bold;
+		color: #5cd1fd;
+	}
+	img {
+		margin-right: 1rem;
+			}
+		li {
+			list-style: none;
+			padding-top: 1rem;
+		}
+	span {
+		color: #000;
+	}
+}
+.contact-art {
+	.bg();
+	position: relative;
+	top: -80rem;
+	background-image: url('img/banner-contact.png');
+	min-height: 21.8rem;
+	h2 {
+		.titleH2;
+		margin-bottom: 3rem;
+		span {
+			img {
+				margin-right: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+	.skew-form {
+		.skew-form(); 
+		width: 19.6rem;
+		margin-top: 6.3rem;
+		background-color: #000;
+			a {
+				.link();
+			}
+	}
+}
+/*-----------------END of MAP------------*/
+
+/*-----------------FOOTER----------------*/
+footer {
+	height: 26.6rem;
+	font-family: 'PT Sans Caption', sans-serif;
+	background-color: @footerColor;
+		p {
+			color: #656565;
+			font-size: 1rem;
+			padding-top: 3rem;
+		}
+	.icons {
+		text-align: center; 
+		margin: 0 auto;
+		padding-top: 3rem;
+		img {
+			margin-left: 4rem;
+		}
+	}
+	.icon-title {
+		p {
+		display: inline-block;
+		color: @whtColor;
+		font-size: 1.6rem;
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 1rem;
+		}
+	}
+}
+/*-----------------END of FOOTER-----------*/
